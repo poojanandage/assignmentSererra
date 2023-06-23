@@ -1,0 +1,36 @@
+
+.p{
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+#p{
+    border: 1px solid;
+    border-width: 2;
+    border-radius: 10px;
+    // width: 8%;
+    margin-left: 14px !important;
+    padding: -2px;
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.42);
+    padding: 4px;
+}
+.ml-100{
+    margin-left: 66px;
+}
+.card{
+    box-shadow:1px 7px 8px 0px rgba(0, 0, 0, 0.42);
+}
+.card .card-body p {
+    margin-bottom: 10px !important;
+    color: #495057;
+}
+i{
+    color: #969696;
+    // font-size: 20px;
+}
+.status{
+   background-color:  #EDEDED;
+}

@@ -1,0 +1,115 @@
+
+        
+
+<div class="container-fluid ">
+  <div class="control-section">
+    <div class="col-lg-12 col-sm-12 col-md-12" id="sidebar-section">
+      <div id="head">
+        <div class="header">
+          <div class="menu"><span class="e-icons expand"></span></div>
+        </div>
+      </div>
+     
+      <!-- sidebar element declaration -->
+      <ejs-sidebar id="dockSidebar" #sidebarInstance [type]="type" [enableDock]='enableDock' [dockSize]='dockSize'
+        [target]="target" [closeOnDocumentClick]="closeOnDocumentClick">
+        <div class="content-area">
+          <div class="dock">
+            <ul>
+              <li class="sidebar-item">
+                <span><img src="/src/assets/images/rps-logo.png" alt="Logo" srcset=""></span>
+            </li>
+              <li class="sidebar-item " routerLinkActive="filterHover" [routerLinkActiveOptions]="{exact : true}">
+                <span class="active" routerLink="/home"><i class="fas fa-home i"></i></span>
+              </li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/net"><i class="fas fa-network-wired i"></i></span>
+              </li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/calender"><i class="fas fa-calendar i"></i></span></li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/list"><i class="fas fa-list-ul i"></i></span>
+              </li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/chart" ><i class="fas fa-chart-bar i"></i></span>
+              </li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/cog"><i class="fas fa-cog i"></i></span>
+              </li>
+              <li class="sidebar-item" routerLinkActive="filterHover">
+                <span class="active" routerLink="/info"><i class="fas fa-info-circle i"></i></span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </ejs-sidebar>
+     <div class="row">
+        <div class="col py-2">
+            <span class="h3">Scheduler</span>
+            <span class="ml-930">
+                <span><i class="fas fa-sliders-h mx-2"></i>Setting</span>
+                <span><i class="far fa-comment-alt mx-2"></i>Send Feedback</span>
+            </span>
+
+        </div>
+     </div>
+     <div class="row" id="row" style="border-top: 4px solid rgba(128, 128, 128,.05);">
+        <div class="col-lg-8 offset-lg-1">
+            <div class="bg-light  pt-2" style="margin-right: 14px;">
+                       <div class="p" id="p"><i class="fas fa-filter mr-2"></i>filter<i class="fas fa-chevron-down ml-3"></i></div>
+                       <div class="p" id="p">Group By Location<i class="fas fa-chevron-down ml-3"></i></div>
+                       <div class="p date"><app-datepicker></app-datepicker></div>
+                       <div class="p" id="p">Week<i class="fas fa-chevron-down ml-3"></i></div>
+                       <div class="p ml-470 text-secondary"><h6>Show Map<i class="fas fa-toggle-off ml-3"></i></h6></div>      
+              </div> 
+        </div>
+        <div class="col-lg-3">
+            <div class=" pt-2">
+                <div class="p" id="p"><i class="fas fa-filter mr-2"></i>filter<i class="fas fa-chevron-down ml-3"></i></div>
+                <div class="p"><input type="search" name="" id="" class="form-control search" placeholder="Search"><i class="fas fa-search icon-search"></i></div>
+            </div>
+        </div>
+     </div>
+     <div class="row" id="row">
+        <div class="col-lg-8 offset-lg-1">
+
+            <app-scheduler></app-scheduler>
+        </div>
+        <div class="col-lg-3">
+            <app-cards></app-cards>
+        </div>
+     </div>
+    </div> 
+  </div>
+  <footer>
+    <div>
+      <div class="row py-2">
+        <div class="col-lg-2"> 
+          <p class="ml-5 pl-3">Showing 5 out of 5</p>
+        </div>
+        <div class="col-lg-6">
+           <button class=" btn-sm alert alert-primary"><i class="fas fa-angle-double-down text-primary pr-2"></i>LOW</button>
+           <button class=" btn-sm alert alert-warning mx-2"><i class="fas fa-angle-up text-warning pr-2"></i>MEDIUM</button>
+           <button class="btn-sm alert alert-danger"><i class="fas fa-angle-double-up text-danger pr-2"></i>HIGH</button>
+        </div>
+        <div class="col-lg-1">
+          <span class="secondary px-2"><i class="fas fa-angle-left"></i></span>
+          <span class="one px-1 mx-2">1</span>
+          <span class="secondary px-2"><i class="fas fa-angle-right"></i></span>
+        </div>
+        <div class="col-lg-3 ">
+          <div class="ml-230">
+          <span class="secondary px-2"><i class="fas fa-angle-left"></i></span>
+          <span class="one px-1 mx-2">1</span>
+          <span class="secondary px-2"><i class="fas fa-angle-right"></i></span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+</div>
+
+
+  <router-outlet></router-outlet>
